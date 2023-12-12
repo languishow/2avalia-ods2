@@ -1,4 +1,4 @@
-package com.mycompany.mavenproject1;
+package diagrama;
 
 
 
@@ -10,15 +10,17 @@ public class Clinica {
  private String nome;
  private String endereco;
  private String cnpj;
- private String ValorConsulta;
- private String ValorTotal;
- private String realizarAtendimento;
+ private Float ValorConsulta;
+ private final Float ValorTotal;
+ private final String realizarAtendimento;
 
-    public Clinica(String nome, String endereco, String cnpj, String ValorConsulta) {
+    public Clinica(String nome, String endereco, String cnpj, Float ValorConsulta, Float ValorTotal, String realizarAtendimento) {
         this.nome = nome;
         this.endereco = endereco;
         this.cnpj = cnpj;
         this.ValorConsulta = ValorConsulta;
+        this.ValorTotal = ValorTotal;
+        this.realizarAtendimento = realizarAtendimento;
     }
 
     public String getNome() {
@@ -45,15 +47,16 @@ public class Clinica {
         this.cnpj = cnpj;
     }
 
-    public String getValorConsulta() {
+    public Float getValorConsulta() {
         return ValorConsulta;
     }
 
-    public void setValorConsulta(String ValorConsulta) {
+    public void setValorConsulta(Float ValorConsulta) {
         this.ValorConsulta = ValorConsulta;
     }
     
-  public String getValorTotal() {
+  
+  public Float getValorTotal() {
         return ValorTotal;
     }
  
